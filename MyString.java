@@ -128,7 +128,7 @@ public class MyString {
         
         for(int i = 0; i < n; i++) {
 
-            int asciiOfrandomchar = 'a' + (int) ((26 * Math.random()) + 1);
+            int asciiOfrandomchar = 'a' + (int) ((26 * Math.random()));
 
             char c = (char) asciiOfrandomchar;
 
