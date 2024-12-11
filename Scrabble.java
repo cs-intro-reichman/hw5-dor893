@@ -75,7 +75,16 @@ public class Scrabble {
 
 		for(int i = 0; i < word.length(); i++) {
 
-			int index = word.charAt(i) - 'a';
+			char letter = word.charAt(i);
+
+			if (letter < 'a' || letter > 'z') {
+				
+				System.out.println("Invalid character in word: " + letter);
+				
+				return 0; 
+			}
+
+			int index = letter - 'a';
 
 			int addToscore = SCRABBLE_LETTER_VALUES[index];
 
@@ -158,7 +167,7 @@ public class Scrabble {
 				System.out.println("No such word in the dictionary. try again.");
 				
 			}
-			
+
 		}
 
 		if (hand.length() == 0) {
