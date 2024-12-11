@@ -138,21 +138,27 @@ public class Scrabble {
 				
 				break;
 			}
-			
-			if (!isWordInDictionary(input)) {
-				
-				System.out.println("No such word in the dictionary. try again.");
-				
-				
-			}
-
-			hand = MyString.remove(hand, input);
 
 			int wordScore = wordScore(input);
 
-			score += wordScore;
+			if(MyString.subsetOf(input, hand) && isWordInDictionary(input)) {
 
-			System.out.println(input + " earned " + wordScore + " points. Score: " + score + " points\n");
+				score += wordScore;
+
+				hand = MyString.remove(hand, input);
+
+				System.out.println(input + " earned " + wordScore + " points. Score: " + score + " points\n");
+
+			} else if (!MyString.subsetOf(input, hand)) {
+
+				System.out.println("Invalid word. Try again.");
+
+			} else if (!isWordInDictionary(input)){
+				
+				System.out.println("No such word in the dictionary. try again.");
+				
+			}
+			
 		}
 
 		if (hand.length() == 0) {
