@@ -156,7 +156,7 @@ public class Scrabble {
 
 				System.out.println(input + " earned " + wordScore(input) + " points. Score: " + score + " points\n");
 
-			} else if (!MyString.subsetOf(input, hand)) {
+			} else if (!MyString.subsetOf(hand, input)) {
 
 				System.out.println("Invalid word. Try again.");
 
