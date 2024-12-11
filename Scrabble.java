@@ -179,12 +179,12 @@ public class Scrabble {
 			// Gets the user's input, which is all the characters entered by 
 			// the user until the user enter the ENTER character.
 			String input = in.readString();
-            
-			playHand(input);
 
 			if(input.equals("n")) {
-
-				playHand(input);
+				
+				String hand = createHand();  
+				
+                playHand(hand); 
 
 			} else if(input.equals("e")) {
 				
