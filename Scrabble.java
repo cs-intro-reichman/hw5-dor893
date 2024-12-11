@@ -180,6 +180,10 @@ public class Scrabble {
 			// the user until the user enter the ENTER character.
 			String input = in.readString();
 
+			String hand = createHand();
+            
+			playHand(hand);
+
 			if(input.equals("n")) {
 
 				playHand(input);
