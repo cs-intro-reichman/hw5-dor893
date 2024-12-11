@@ -152,7 +152,7 @@ public class Scrabble {
 
 			score += wordScore;
 
-			System.out.println(input + " earned " + wordScore + " points. Score: " + score + " points");
+			System.out.println(input + " earned " + wordScore + " points. Score: " + score + " points\n");
 		}
 
 		if (hand.length() == 0) {
